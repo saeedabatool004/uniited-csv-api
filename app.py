@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify
 import csv
 
 app = Flask(__name__)
@@ -11,6 +11,3 @@ def get_data():
         for row in reader:
             rows.append(dict(row))
     return jsonify(rows)
-
-if __name__ == "__main__":
-    app.run()
